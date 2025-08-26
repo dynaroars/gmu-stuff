@@ -1,4 +1,5 @@
 \documentclass[oneside,11pt,dvipsnames]{book}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{pagecolor}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -14,10 +15,6 @@
 \usepackage{fontawesome5}
 \usepackage{censor}
 \usepackage{enumitem}
-\usepackage{epigraph}
-\newcommand{\myepigraphsimpsons}[1]{
-\epigraph{\vspace{-0.2in} \emph{#1}}{\textsc{The Simpsons}}
-}
 \usepackage{cite}
 \usepackage{caption}
 \captionsetup{font=small}
@@ -31,7 +28,7 @@
 
 \usepackage{tikz}
 \usetikzlibrary{calc}
-\usepackage[dvipsnames]{xcolor}
+
 %\usepackage{anyfontsize}
 %\usepackage{sectsty}
 \usepackage[acronym]{glossaries}
@@ -318,6 +315,42 @@ To open an Amazon Business Account, email \url{mailto:purch1@gmu.edu} and say th
 \chapter{MFG}
 
 
+\chapter{Email, Calendar, and VPN}
+
+\section{Email}
+GMU Mail uses Outlook 365 and requires you to use OAuth2/Modern Auth to authenticate your GMU credentials.  
+
+\paragraph{Clients} Webmail, Outlook, and Apple Mail are all supported.  The official mails in Android and iOS are also supported. Thunderbird (e.g., on Linux) is also supported but you need to configure it manually as follows (these settings are obtained by logging in to your GMU webmail and going to Settings > Mail > Sync email):
+
+\begin{itemize}
+  \item IMAP
+  \begin{itemize}
+    \item Server: \texttt{outlook.office365.com}
+    \item Port: \texttt{993}
+    \item Connection security: SSL/TLS
+    \item Authentication Method: Leave blank (or OAuth2/Modern Auth if you have it)
+    \item Username: Your GMU email address (e.g., tvn@gmu.edu).  Not sure if this is required, but I always use it.
+  \end{itemize}
+  \item SMTP 
+  \begin{itemize}
+    \item Server name: \texttt{smtp-mail.outlook.com}
+  \item Port: \texttt{587}
+  \item Connection Security: STARTTLS
+  \item Authentication Method: OAuth2/Modern Auth
+  \item Username: Your GMU email address (e.g., tvn@gmu.edu).  Not sure if this is required, but I always use it.
+  \end{itemize}
+\end{itemize}
+
+\begin{commentbox}
+On Linux I can only get Thunderbird to work.  Other email clients do not support OAuth2 well. 
+\end{commentbox}
+
+\section{Calendar}
+After setting up your email, you can also set up your calendar.  You can use the same clients as above, e.g., Outlook, Apple Calendar, Thunderbird, and so on.  I don't really remember if I had to do anything special to set it up.
+
+
+
+\chapter{Personal Website}
 
 \end{document}
 
@@ -325,3 +358,63 @@ To open an Amazon Business Account, email \url{mailto:purch1@gmu.edu} and say th
 
 
 
+ IMAP server
+	
+
+outlook.office365.com
+
+IMAP port
+	
+
+993
+
+IMAP encryption
+	
+
+SSL/TLS
+
+Authentication Method
+	
+
+OAuth2/Modern Auth
+transparent170x1px.png 	
+
+POP server name
+	
+
+outlook.office365.com
+
+POP port
+	
+
+995
+
+POP encryption
+	
+
+SSL/TLS
+
+Authentication Method
+	
+
+OAuth2/Modern Auth
+
+SMTP server name
+	
+
+smtp-mail.outlook.com
+
+SMTP port
+	
+
+587
+
+SMTP encryption
+	
+
+STARTTLS
+
+Authentication Method
+	
+
+OAuth2/Modern Auth
